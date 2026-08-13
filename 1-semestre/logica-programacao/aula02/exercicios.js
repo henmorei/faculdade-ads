@@ -1,30 +1,37 @@
 // Elaborar os seguintes programas de entrada, processamento e saída.
 // - Elaborar um programa que leia 2 notas de um aluno. Calcule e mostre a média
 // das notas.
+
 // -Elaborar um programa que leia o valor de um jantar. Sabendo que a taxa do
 // garçom é de 10%, calcule e mostre a taxa do garçom e o valor total a ser pago.
+
 // -Elaborar um programa que leia o valor de um veículo. Mostre a promoção de
 // financiamento da revenda, que consiste em 50% de entrada e o valor do saldo
 // em 12x.
+
 // -Elaborar um programa que leia nome e idade de um aluno. Calcule o ano que
 // ele nasceu. Exiba mensagem informando o nome do aluno e seu ano de
 // nascimento.
+
 // -Elaborar um programa que leia um número. Exiba os vizinhos deste número
 // (anterior e posterior)
 
 const prompt = require("prompt-sync")();
 
-console.log("##### EXERCÍCIOS AULA 02 #####");
+console.log("##### EXERCÍCIOS AULA 02 #####\n");
 
 console.log("(1) Cálculo de médias");
+console.log("(2) Cálculo de taxa do garçom");
 const userSelect = Number(prompt("Selecione o execicio: "));
 switch (userSelect) {
   case 1:
     exercicio001();
+  case 2:
+    exercicio002();
 }
 
 function exercicio001() {
-  console.log("#### Cálculo de médias ####");
+  console.log("\n#### Cálculo de médias ####\n");
   const quantiNotas = prompt("Quantas notas serão computadas? ");
   let arrayNotas = [];
   let somaNotas = 0;
@@ -36,3 +43,25 @@ function exercicio001() {
   mediaNotas = somaNotas / quantiNotas;
   console.log(`A média das notas ${arrayNotas} é ${mediaNotas.toFixed(2)}`);
 }
+
+
+function exercicio002() {
+  console.log('\n#### Cálculo de taxa do garçom ####\n');
+  valorTaxa = Number(prompt('Qual a porcentagem da taxa de serviço? '));
+  valorJantar = Number(prompt('Qual o valor  do jantar? '));
+  totalTaxa = (valorJantar * (valorTaxa / 100));
+  totalJantar = (valorJantar + totalTaxa);
+
+  console.log(`
+    #############################################
+
+    Valor do jantar_______________ R$${valorJantar.toFixed(2)}
+    Porcentagem de serviço________ ${valorTaxa}%
+    Valor da taxa_________________ R$${totalTaxa.toFixed(2)}
+
+    #############################################
+
+    Total ajustado_______________ R$${totalJantar.toFixed(2)}
+    
+    #############################################`);
+  };
