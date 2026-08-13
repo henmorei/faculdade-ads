@@ -1,0 +1,16 @@
+# Dependências Node
+node_modules/
+
+# Arquivos compilados C/C++/Java
+*.exe
+*.out
+*.class
+
+# Python
+__pycache__/
+*.pyc
+
+# IDEs e OS
+.vscode/
+.idea/
+.DS_Store
