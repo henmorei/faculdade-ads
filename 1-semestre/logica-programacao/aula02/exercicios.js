@@ -17,20 +17,38 @@
 // (anterior e posterior)
 
 const prompt = require("prompt-sync")();
+console.clear();
+
+function converteNum (num){
+  return Number(num.replace(',','.'));
+}
+
+//////////////////////////////////////////////////////////////////
 
 console.log("##### EXERCÍCIOS AULA 02 #####\n");
-
 console.log("(1) Cálculo de médias");
 console.log("(2) Cálculo de taxa do garçom");
-const userSelect = Number(prompt("Selecione o execicio: "));
+
+const userSelect = Number(prompt("\nSelecione o execicio: "));
 switch (userSelect) {
   case 1:
     exercicio001();
+    break
   case 2:
     exercicio002();
-}
+    break
+  default:
+    prompt('Opção inválida, tente novamente....');
+  }
+
+//////////////////////////////////////////////////////////////////
 
 function exercicio001() {
+
+  // Elaborar um programa que leia 2 notas de um aluno. Calcule e mostre a média
+  // das notas.
+
+  console.clear();
   console.log("\n#### Cálculo de médias ####\n");
   const quantiNotas = prompt("Quantas notas serão computadas? ");
   let arrayNotas = [];
@@ -42,26 +60,34 @@ function exercicio001() {
   }
   mediaNotas = somaNotas / quantiNotas;
   console.log(`A média das notas ${arrayNotas} é ${mediaNotas.toFixed(2)}`);
-}
-
+};
 
 function exercicio002() {
+
+  // -Elaborar um programa que leia o valor de um jantar. Sabendo que a taxa do
+  // garçom é de 10%, calcule e mostre a taxa do garçom e o valor total a ser pago.
+  console.clear();
   console.log('\n#### Cálculo de taxa do garçom ####\n');
   valorTaxa = Number(prompt('Qual a porcentagem da taxa de serviço? '));
-  valorJantar = Number(prompt('Qual o valor  do jantar? '));
+  valorJantar = prompt('Qual o valor  do jantar? ');
+  valorJantar = converteNum(valorJantar);
   totalTaxa = (valorJantar * (valorTaxa / 100));
   totalJantar = (valorJantar + totalTaxa);
 
   console.log(`
-    #############################################
+    ================================================
+                     CUPOM FISCAL
+    ================================================
+    Valor do jantar                R$${valorJantar.toFixed(2)}
+    Porcentagem de serviço         ${valorTaxa}%
+    Valor da taxa                  R$${totalTaxa.toFixed(2)}
+    -----------------------------------------------
+    Total a PAGAR                  R$${totalJantar.toFixed(2)}
+    ================================================`);
+};
 
-    Valor do jantar_______________ R$${valorJantar.toFixed(2)}
-    Porcentagem de serviço________ ${valorTaxa}%
-    Valor da taxa_________________ R$${totalTaxa.toFixed(2)}
-
-    #############################################
-
-    Total ajustado_______________ R$${totalJantar.toFixed(2)}
-    
-    #############################################`);
-  };
+function exercicio003(){
+  // -Elaborar um programa que leia o valor de um veículo. Mostre a promoção de
+  // financiamento da revenda, que consiste em 50% de entrada e o valor do saldo
+  // em 12x.
+}

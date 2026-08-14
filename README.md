@@ -16,7 +16,7 @@ O objetivo deste repositório é documentar meu aprendizado, armazenar códigos 
  
 * [Fundamentos Computacionais]
  
-* [Desenvolvimento de Interfaces para Web]
+* [Desenvolvimento de Interfaces para Web](./1-semestre/desenvolvimento-interfaces-web/)
  
 * [Sistemas Operacionais]
 
@@ -26,7 +26,7 @@ O objetivo deste repositório é documentar meu aprendizado, armazenar códigos 
 
 Durante o curso, estas são as principais tecnologias utilizadas nos projetos deste repositório até o momento:
 
-* **Linguagens:** JavaScript
+* **Linguagens:** HTML5 | CSS3 | JavaScript
 * **Banco de Dados:** MySQL | PostgreSQL
 * **Ferramentas:** Git | GitHub | VS Code | Figma
 
