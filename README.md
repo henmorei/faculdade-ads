@@ -12,13 +12,13 @@ O objetivo deste repositório é documentar meu aprendizado, armazenar códigos 
 
 * [Lógica de Programação](./1-semestre/logica-programacao/)
 
-* [Design de Interface e Experiência do Usuário]
+* Design de Interface e Experiência do Usuário
  
-* [Fundamentos Computacionais]
+* Fundamentos Computacionais
  
 * [Desenvolvimento de Interfaces para Web](./1-semestre/desenvolvimento-interfaces-web/)
  
-* [Sistemas Operacionais]
+* Sistemas Operacionais
 
 ---
 
