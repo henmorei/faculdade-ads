@@ -56,6 +56,7 @@ function exercicio001() {
   mediaNotas = somaNotas / quantiNotas;
   console.log(`A média das notas ${arrayNotas} é ${mediaNotas.toFixed(2)}`);
 };
+};
 
 function exercicio002() {
 
