@@ -19,6 +19,7 @@ switch (userSelect) {
   case 1:
     exercicio001();
     break
+    break
   case 2:
     exercicio002();
     break
@@ -55,6 +56,7 @@ function exercicio001() {
   mediaNotas = somaNotas / quantiNotas;
   console.log(`A média das notas ${arrayNotas} é ${mediaNotas.toFixed(2)}`);
 };
+};
 
 function exercicio002() {
 
@@ -64,6 +66,8 @@ function exercicio002() {
   console.clear();
   console.log('#### Cálculo de taxa do garçom ####\n');
   valorTaxa = Number(prompt('Qual a porcentagem da taxa de serviço? '));
+  valorJantar = prompt('Qual o valor  do jantar? ');
+  valorJantar = converteNum(valorJantar);
   valorJantar = prompt('Qual o valor  do jantar? ');
   valorJantar = converteNum(valorJantar);
   totalTaxa = (valorJantar * (valorTaxa / 100));
